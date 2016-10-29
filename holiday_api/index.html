@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="./lib/handlebars.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<title>Find This Day in History</title>	
+</head>
+
+<body>
+<div class="wrapper">
+  <h2>learn what was this day in history</h2>
+  <div class="submit">
+      <div class="container country-input">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Input country code via listed below</h4>
+            <input type="text" id="country" placeholder="  Country code"/>
+          </div>
+          <div class="col-md-6">
+            <h4>Input date</h4>
+            <input type="text" id="date" placeholder=" YYYY.MM.DD/YYYY.MM"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="well well-countries">
+            <h4>Supported Countries</h4>
+            <div class="row">
+                  <div class="col-xs-12 col-md-4"><code>AR</code> Argentina</div>
+                  <div class="col-xs-12 col-md-4"><code>AO</code> Angola</div>
+                  <div class="col-xs-12 col-md-4"><code>AU</code> Australia</div>
+                  <div class="col-xs-12 col-md-4"><code>AW</code> Aruba</div>
+                  <div class="col-xs-6 col-md-4"><code>BE</code> Belgium</div>
+                  <div class="col-xs-6 col-md-4"><code>BG</code> Bulgaria</div>
+                  <div class="col-xs-6 col-md-4"><code>BR</code> Brazil</div>
+                  <div class="col-xs-6 col-md-4"><code>CA</code> Canada</div>
+                  <div class="col-xs-6 col-md-4"><code>CH</code> Switzerland</div>
+                  <div class="col-xs-6 col-md-4"><code>CN</code> China</div>
+                  <div class="col-xs-6 col-md-4"><code>CO</code> Colombia</div>
+                  <div class="col-xs-6 col-md-4"><code>CZ</code> Czech Republic</div>
+                  <div class="col-xs-6 col-md-4"><code>DE</code> Germany</div>
+                  <div class="col-xs-6 col-md-4"><code>DK</code> Denmark</div>
+                  <div class="col-xs-6 col-md-4"><code>ES</code> Spain</div>
+                  <div class="col-xs-6 col-md-4"><code>FR</code> France</div>
+                  <div class="col-xs-6 col-md-4"><code>GB</code> United Kingdom</div>
+                  <div class="col-xs-6 col-md-4"><code>GT</code> Guatemala</div>
+                  <div class="col-xs-6 col-md-4"><code>HR</code> Croatia</div>
+                  <div class="col-xs-6 col-md-4"><code>HU</code> Hungary</div>
+                  <div class="col-xs-6 col-md-4"><code>ID</code> Indonesia</div>
+                  <div class="col-xs-6 col-md-4"><code>IE</code> Ireland</div>
+                  <div class="col-xs-6 col-md-4"><code>IN</code> India</div>
+                  <div class="col-xs-6 col-md-4"><code>IT</code> Italy</div>
+                  <div class="col-xs-6 col-md-4"><code>LS</code> Lesotho</div>
+                  <div class="col-xs-6 col-md-4"><code>LU</code> Luxembourg</div>
+                  <div class="col-xs-6 col-md-4"><code>MG</code> Madagascar</div>
+                  <div class="col-xs-6 col-md-4"><code>MQ</code> Martinique</div>
+                  <div class="col-xs-6 col-md-4"><code>MX</code> Mexico</div>
+                  <div class="col-xs-6 col-md-4"><code>NL</code> Netherlands</div>
+                  <div class="col-xs-6 col-md-4"><code>NO</code> Norway</div>
+                  <div class="col-xs-6 col-md-4"><code>PL</code> Poland</div>
+                  <div class="col-xs-6 col-md-4"><code>PR</code> Puerto Rico</div>
+                  <div class="col-xs-6 col-md-4"><code>RU</code> Russia</div>
+                  <div class="col-xs-6 col-md-4"><code>SI</code> Slovenia</div>
+                  <div class="col-xs-6 col-md-4"><code>SK</code> Slovakia</div>
+                  <div class="col-xs-6 col-md-4"><code>UA</code> Ukraine</div>
+                  <div class="col-xs-6 col-md-4"><code>US</code> United States</div>
+            </div>
+      </div>
+
+      <input type="button" id="submit" class="btn btn-success" value="Get Day!">
+  </div>
+
+  <script id="some-template" type="text/x-handlebars-template">
+      <ul>
+        {{#holidays}}
+        <li>{{name}} on {{date}}</li>
+        {{/holidays}}
+      </ul>
+      <ul>
+        {{#2000-01-01}}
+        <li>{{name}} on {{date}}</li>
+        {{/2000-01-01}}
+      </ul>
+  </script>
+
+  <div id="result" class="content-placeholder"></div>
+
+  <p id="txt"></p>
+</div>
+</body>
+</html>
