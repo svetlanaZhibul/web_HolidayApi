@@ -2,10 +2,12 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="./lib/handlebars.js"></script>
-	<script type="text/javascript" src="index.js"></script>
-	<title>Find This Day in History</title>	
+  <script type="text/javascript" src="index.js"></script>
+	
+  <title>Find This Day in History</title>	
 </head>
 
 <body>
@@ -78,11 +80,11 @@
         <li>{{name}} on {{date}}</li>
         {{/holidays}}
       </ul>
-      <ul>
+      <!--<ul>
         {{#2000-01-01}}
         <li>{{name}} on {{date}}</li>
         {{/2000-01-01}}
-      </ul>
+      </ul>-->
   </script>
 
   <div id="result" class="content-placeholder"></div>
