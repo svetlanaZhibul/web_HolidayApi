@@ -1,0 +1,25 @@
+.wrapper{
+	width: 890px;
+	margin: 0 auto;
+}
+
+.btn{
+	margin: 2% 40%;
+	width: 120px;
+	font-weight: bold;
+}
+.country-input{
+	margin: 15px 0;
+}
+
+h2{
+	text-align: center;
+}
+
+ul{
+	padding-top: 15px; 
+}
+
+li{
+	height: 20px;
+}
