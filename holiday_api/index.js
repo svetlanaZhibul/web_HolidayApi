@@ -74,7 +74,7 @@ $(document).ready(function () {
 		}
 
 		if(data.holidays.length == 0){
-		    alert('No holiday has been found.');
+		    alert('No holiday has been found. Check the "date" field.');
                 }
                 console.log("success", data);
         });
