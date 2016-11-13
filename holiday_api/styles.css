@@ -27,3 +27,8 @@ li{
 .date{
 	color: #5994f3;
 }
+#errMsg{
+	font-size: 28px;
+	font-family: helvetica;
+	margin-left: 50px;
+}
